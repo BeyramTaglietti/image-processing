@@ -14,9 +14,6 @@ templ IndexPage() {
 				@inputs.FileInput(inputs.FileInputProps{
 					Id:   "file",
 					Name: "file",
-					OnChange: templ.ComponentScript{
-						Call: "loadFile(event)",
-					},
 				})
 				@buttons.Button(buttons.ButtonProps{Title: "Click me!"})
 				<div id="result"></div>
