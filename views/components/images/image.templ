@@ -1,0 +1,19 @@
+
+package images
+
+type ImageResultProps struct {
+	Before string
+	After  string
+}
+
+templ ImageResult(props ImageResultProps) {
+	<div class="diff aspect-[16/9] w-full">
+		<div class="diff-item-1">
+			<img alt="after" src={ props.After }/>
+		</div>
+		<div class="diff-item-2">
+			<img alt="before" src={ props.Before }/>
+		</div>
+		<div class="diff-resizer"></div>
+	</div>
+}

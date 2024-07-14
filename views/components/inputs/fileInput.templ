@@ -1,0 +1,18 @@
+
+package inputs
+
+type FileInputProps struct {
+	Id       string
+	Name     string
+	OnChange templ.ComponentScript
+}
+
+templ FileInput(props FileInputProps) {
+	<input
+		id={ props.Id }
+		name={ props.Name }
+		onchange={ props.OnChange }
+		type="file"
+		class="file-input file-input-bordered file-input-primary w-full max-w-xs"
+	/>
+}

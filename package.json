@@ -1,0 +1,8 @@
+{
+  "name": "image-processing",
+  "scripts": {
+    "dev": "concurrently \"templ generate --watch\" \"air\"",
+    "build": "templ generate && go build .",
+    "start": "./image-processing"
+  }
+}

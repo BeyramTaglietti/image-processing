@@ -1,0 +1,9 @@
+package buttons
+
+type ButtonProps struct {
+	Title string
+}
+
+templ Button(props ButtonProps) {
+	<button class="btn btn-primary text-white">{ props.Title }</button>
+}
