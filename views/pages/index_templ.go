@@ -44,7 +44,7 @@ func IndexPage() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<script>\n\t\t\tvar loadFile = function(event) {\n\t\t\t\tvar output = document.getElementById('preview');\n\t\t\t\toutput.src = URL.createObjectURL(event.target.files[0]);\n\t\t\t\toutput.onload = function() {\n\t\t\t\t\tURL.revokeObjectURL(output.src) // free memory\n\t\t\t\t}\n\t\t\t};\n\t\t</script> <div class=\"w-full h-full flex justify-center flex-col gap-8 px-8\"><h1 class=\"text-4xl font-bold text-white\">A very fast image compressor made with Golang</h1><form class=\"w-full flex flex-col gap-4\" id=\"form\" hx-encoding=\"multipart/form-data\" hx-post=\"/upload\" hx-target=\"#result\">")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -62,7 +62,7 @@ func IndexPage() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div id=\"result\"></div></form></div>")
+			templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 2)
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}

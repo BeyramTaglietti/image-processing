@@ -1,0 +1,3 @@
+<div class=\"diff aspect-[16/9] w-full\"><div class=\"diff-item-1\"><img alt=\"after\" src=\"
+\"></div><div class=\"diff-item-2\"><img alt=\"before\" src=\"
+\"></div><div class=\"diff-resizer\"></div></div>

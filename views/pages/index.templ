@@ -10,12 +10,15 @@ templ IndexPage() {
 	@base.Base(base.BaseProps{Title: "A very fast image compressor"}) {
 		<div class="w-full h-full flex justify-center flex-col gap-8 px-8">
 			<h1 class="text-4xl font-bold text-white">A very fast image compressor made with Golang</h1>
-			<form class="w-full flex flex-col gap-4" id="form" hx-encoding="multipart/form-data" hx-post="/upload" hx-target="#result">
+			<form class="w-full flex flex-col gap-4" id="form" hx-encoding="multipart/form-data" hx-post="/upload" hx-target="#result" hx-indicator="#loading">
 				@inputs.FileInput(inputs.FileInputProps{
 					Id:   "file",
 					Name: "file",
 				})
 				@buttons.Button(buttons.ButtonProps{Title: "Click me!"})
+				<div class="w-full h-30 flex justify-center items-center">
+					<span id="loading" class="loading loading-spinner loading-lg htmx-indicator text-primary"></span>
+				</div>
 				<div id="result"></div>
 			</form>
 		</div>
