@@ -4,5 +4,8 @@
     "dev": "concurrently \"templ generate --watch\" \"air\"",
     "build": "templ generate && go build .",
     "start": "./image-processing"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
